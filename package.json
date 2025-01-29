@@ -1,0 +1,30 @@
+{
+    "name": "netlify-webhook-example",
+    "version": "1.0.0",
+    "description": "Example of a Netlify function to receive and store webhooks",
+    "main": "index.js",
+    "scripts": {
+        "dev": "netlify dev",
+        "build": "netlify build",
+        "start": "netlify functions:serve",
+        "deploy": "netlify deploy --prod"
+    },
+    "keywords": [
+        "netlify",
+        "functions",
+        "webhook",
+        "typescript"
+    ],
+    "author": "Sang",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^18.19.74",
+        "netlify-cli": "^15.11.0",
+        "typescript": "^5.7.3"
+    },
+    "dependencies": {
+        "@vercel/node": "^3.2.29",
+        "fs": "^0.0.1-security",
+        "path": "^0.12.7"
+    }
+}

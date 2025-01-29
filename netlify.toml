@@ -1,0 +1,2 @@
+[functions]
+  webhook = { path = "serverless/functions/webhook.ts" }
