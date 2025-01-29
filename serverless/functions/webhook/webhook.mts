@@ -6,6 +6,9 @@ export default (event: HandlerEvent, request: Request, context: Context) => {
     const url = new URL(request.url);
     let subject = url.searchParams.get("name") || "World";
     console.log("events ", JSON.stringify(event));
+    console.log("request ", JSON.stringify(request));
+    console.log("context ", JSON.stringify(context));
+
     if (httpMethod === "POST") {
       subject = "POST";
       console.log("Post payload", JSON.stringify(request));
