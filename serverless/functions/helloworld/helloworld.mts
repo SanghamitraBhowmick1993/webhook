@@ -126,25 +126,27 @@ const handler: Handler = async (
       const filename = `webhook_data.json`;
       const filePath = path.join(__dirname, "data", filename);
 
-      try {
-        await fs.mkdir(path.join(__dirname, "data"));
-      } catch (mkdirErr: any) {
-        if (mkdirErr.code !== "EEXIST") {
-          console.error("Error creating data directory:", mkdirErr);
-          // return new Response(
-          //   JSON.stringify({ error: "Failed to create data directory" }),
-          //   { status: 500 }
-          // );
-          return {
-            statusCode: 500,
-            body: JSON.stringify({ error: "Failed to create data directory" }),
-          };
-        }
-      }
+      console.log(`Webhook received `, JSON.stringify(payload));
 
-      await fs.writeFile(filePath, JSON.stringify(payload, null, 2));
+      // try {
+      //   await fs.mkdir(path.join(__dirname, "data"));
+      // } catch (mkdirErr: any) {
+      //   if (mkdirErr.code !== "EEXIST") {
+      //     console.error("Error creating data directory:", mkdirErr);
+      //     // return new Response(
+      //     //   JSON.stringify({ error: "Failed to create data directory" }),
+      //     //   { status: 500 }
+      //     // );
+      //     return {
+      //       statusCode: 500,
+      //       body: JSON.stringify({ error: "Failed to create data directory" }),
+      //     };
+      //   }
+      // }
 
-      console.log(`Webhook data saved to ${filePath}`);
+      // await fs.writeFile(filePath, JSON.stringify(payload, null, 2));
+
+      //console.log(`Webhook data saved to ${filePath}`);
 
       // return new Response(
       //   JSON.stringify({ message: "Webhook received and stored successfully" }),
