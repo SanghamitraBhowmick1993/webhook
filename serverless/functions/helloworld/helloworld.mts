@@ -123,7 +123,7 @@ const handler: Handler = async (
       const payload: WebhookPayload = JSON.parse(event.body || "{}");
 
       const timestamp = Date.now();
-      const filename = `webhook_${timestamp}.json`;
+      const filename = `webhook_data.json`;
       const filePath = path.join(__dirname, "data", filename);
 
       try {
