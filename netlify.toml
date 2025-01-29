@@ -1,2 +1,2 @@
 [functions]
-  webhook = { path = "serverless/functions/webhook/webhook.mts" }
+  webhook = { path = "serverless/functions/helloworld/helloworld.mts" }

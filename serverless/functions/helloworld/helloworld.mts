@@ -15,7 +15,10 @@ interface JsonArray
 
 const handler = async (event: HandlerEvent,request: Request, context: Context) => {
   const { httpMethod } = event;
-
+  console.log("events ", JSON.stringify(event));
+  console.log("request ", JSON.stringify(request));
+  console.log("context ", JSON.stringify(context));
+  
   if (httpMethod === "POST") {
     try {
       const payload: WebhookPayload = JSON.parse(event.body || "{}");
